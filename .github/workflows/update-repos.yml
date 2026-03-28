@@ -1,0 +1,32 @@
+name: Update Repository Data
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+  workflow_dispatch:    # Allows you to click "Run Workflow" manually
+  push:
+    branches: [ main ]  # Runs whenever you push code changes
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Required to commit the json file back to the repo
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch GitHub API Data
+        run: |
+          # Replace YOUR_GITHUB_USERNAME with your actual username
+          # We fetch up to 100 repos sorted by most recently updated
+          curl -H "Accept: application/vnd.github.v3+json" \
+               "https://api.github.com/users/simplearyan/repos?sort=updated&per_page=100" > repos.json
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: automated update of repos.json"
+          file_pattern: 'repos.json'
+          branch: main

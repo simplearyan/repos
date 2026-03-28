@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio</title>
+    <!-- Tailwind CSS for modern, minimal styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .repo-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .repo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* Skeleton Animation */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+        .skeleton {
+            background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite linear;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-blue-100">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 glass-header border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-slate-900 rounded-xl text-white">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 id="username-display" class="text-xl font-bold tracking-tight">Loading...</h1>
+                    <p class="text-[10px] text-slate-500 flex items-center gap-1 uppercase tracking-widest font-semibold">
+                        <i data-lucide="refresh-cw" id="status-icon" class="w-3 h-3"></i>
+                        Source: <span id="data-source" class="text-slate-700">Checking...</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group flex-1 max-w-md">
+                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4"></i>
+                <input 
+                    type="text" 
+                    id="search-input"
+                    placeholder="Search projects or languages..." 
+                    class="w-full pl-10 pr-4 py-2.5 bg-slate-100 border-transparent rounded-full text-sm focus:ring-2 focus:ring-blue-500/20 focus:bg-white focus:border-blue-500 transition-all outline-none"
+                >
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-2xl font-bold flex items-center gap-2">
+                All Projects
+                <span id="repo-count" class="text-sm font-normal text-slate-400 bg-white border border-slate-200 px-2 py-0.5 rounded-md">0</span>
+            </h2>
+        </div>
+
+        <!-- Grid Container -->
+        <div id="repo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skeletons shown by default -->
+            <div class="skeleton h-56 rounded-2xl border border-slate-200"></div>
+            <div class="skeleton h-56 rounded-2xl border border-slate-200"></div>
+            <div class="skeleton h-56 rounded-2xl border border-slate-200"></div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-20 bg-white rounded-3xl border border-dashed border-slate-300">
+            <div class="text-slate-300 mb-4 inline-block p-4 bg-slate-50 rounded-full">
+                <i data-lucide="folder-open" class="w-12 h-12"></i>
+            </div>
+            <h2 class="text-xl font-semibold mb-1">No matches found</h2>
+            <p class="text-slate-500">Try adjusting your search terms.</p>
+        </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
+        <p id="footer-copy">© 2024 GitHub Portfolio.</p>
+        <div class="flex items-center gap-4">
+            <a id="gh-link" href="#" class="hover:text-slate-900 transition-colors">GitHub Profile</a>
+            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+            <span class="text-slate-300">Open Source</span>
+        </div>
+    </footer>
+
+    <script>
+        // CONFIGURATION
+        const GITHUB_USERNAME = "simplearyan"; // <-- REPLACE THIS
+        const DATA_FILE_URL = "./repos.json";
+        const CACHE_EXPIRY = 3600000; // 1 hour
+
+        // STATE
+        let allRepos = [];
+        const grid = document.getElementById('repo-grid');
+        const searchInput = document.getElementById('search-input');
+        const repoCount = document.getElementById('repo-count');
+        const dataSourceLabel = document.getElementById('data-source');
+        const statusIcon = document.getElementById('status-icon');
+
+        // INITIALIZE
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('username-display').textContent = GITHUB_USERNAME;
+            document.getElementById('gh-link').href = `https://github.com/${GITHUB_USERNAME}`;
+            document.getElementById('footer-copy').textContent = `© ${new Date().getFullYear()} ${GITHUB_USERNAME}. All code open source.`;
+            initLucide();
+            fetchFlow();
+        });
+
+        function initLucide() {
+            lucide.createIcons();
+        }
+
+        async function fetchFlow() {
+            // 1. Check LocalStorage
+            const cacheKey = `gh_cache_${GITHUB_USERNAME}`;
+            const cached = localStorage.getItem(cacheKey);
+            
+            if (cached) {
+                const { data, timestamp } = JSON.parse(cached);
+                if (Date.now() - timestamp < CACHE_EXPIRY) {
+                    updateUI(data, "Browser Cache");
+                    revalidateInBackground(cacheKey); // Silent update
+                    return;
+                }
+            }
+
+            // 2. Check Static File (from GitHub Actions)
+            try {
+                const res = await fetch(DATA_FILE_URL);
+                if (res.ok) {
+                    const data = await res.json();
+                    const formatted = formatData(data);
+                    saveCache(cacheKey, formatted);
+                    updateUI(formatted, "Static File");
+                    return;
+                }
+            } catch (e) { console.log("Static file fetch skipped."); }
+
+            // 3. Fallback to Live API
+            fetchLive(cacheKey);
+        }
+
+        async function fetchLive(cacheKey) {
+            statusIcon.classList.add('animate-spin');
+            try {
+                const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
+                if (!res.ok) throw new Error("Rate limit or API error");
+                const data = await res.json();
+                const formatted = formatData(data);
+                saveCache(cacheKey, formatted);
+                updateUI(formatted, "GitHub API");
+            } catch (err) {
+                grid.innerHTML = `<p class="col-span-full text-center text-red-500 py-10">Error loading repos: ${err.message}</p>`;
+            } finally {
+                statusIcon.classList.remove('animate-spin');
+            }
+        }
+
+        async function revalidateInBackground(cacheKey) {
+            try {
+                const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
+                if (res.ok) {
+                    const data = await res.json();
+                    saveCache(cacheKey, formatData(data));
+                }
+            } catch(e) {}
+        }
+
+        function formatData(data) {
+            return data
+                .filter(repo => !repo.fork)
+                .map(repo => ({
+                    id: repo.id,
+                    name: repo.name,
+                    description: repo.description || "Minimalist project built with clean code.",
+                    stars: repo.stargazers_count,
+                    forks: repo.forks_count,
+                    language: repo.language || "Web",
+                    url: repo.html_url,
+                    pages: repo.homepage || (repo.has_pages ? `https://${GITHUB_USERNAME}.github.io/${repo.name}/` : null),
+                    topics: repo.topics || []
+                }));
+        }
+
+        function saveCache(key, data) {
+            localStorage.setItem(key, JSON.stringify({ data, timestamp: Date.now() }));
+        }
+
+        function updateUI(data, source) {
+            allRepos = data;
+            dataSourceLabel.textContent = source;
+            renderRepos(allRepos);
+        }
+
+        function renderRepos(repos) {
+            grid.innerHTML = '';
+            repoCount.textContent = repos.length;
+            
+            if (repos.length === 0) {
+                document.getElementById('empty-state').classList.remove('hidden');
+                return;
+            } else {
+                document.getElementById('empty-state').classList.add('hidden');
+            }
+
+            repos.forEach(repo => {
+                const card = document.createElement('div');
+                card.className = "repo-card group flex flex-col bg-white border border-slate-200 rounded-2xl p-6 shadow-sm";
+                
+                const topicsHtml = repo.topics.slice(0, 3).map(t => 
+                    `<span class="text-[9px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded">${t}</span>`
+                ).join('');
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-blue-50 text-blue-600 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="${repo.url}" target="_blank" class="text-slate-400 hover:text-slate-900 transition-colors" title="View Code">
+                                <i data-lucide="code-2" class="w-4.5 h-4.5"></i>
+                            </a>
+                            ${repo.pages ? `
+                            <a href="${repo.pages}" target="_blank" class="text-slate-400 hover:text-green-600 transition-colors" title="Live Site">
+                                <i data-lucide="external-link" class="w-4.5 h-4.5"></i>
+                            </a>` : ''}
+                        </div>
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors truncate">
+                        ${repo.name.replace(/-/g, ' ')}
+                    </h3>
+                    
+                    <p class="text-slate-500 text-sm line-clamp-2 mb-6 flex-grow">
+                        ${repo.description}
+                    </p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        ${topicsHtml}
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                        <div class="flex items-center gap-4">
+                            <span class="flex items-center gap-1">
+                                <i data-lucide="star" class="w-3.5 h-3.5 text-amber-400 fill-amber-400"></i> ${repo.stars}
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i data-lucide="git-fork" class="w-3.5 h-3.5"></i> ${repo.forks}
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                            ${repo.language}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            initLucide();
+        }
+
+        // Search logic
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = allRepos.filter(r => 
+                r.name.toLowerCase().includes(term) || 
+                r.description.toLowerCase().includes(term) ||
+                r.language.toLowerCase().includes(term)
+            );
+            renderRepos(filtered);
+        });
+    </script>
+</body>
+</html>
