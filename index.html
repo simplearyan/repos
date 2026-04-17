@@ -191,6 +191,9 @@
         }
 
         function formatData(data) {
+            // If the data is already formatted (pre-processed by GitHub Action), return as is
+            if (data.length > 0 && data[0].stars !== undefined) return data;
+
             return data
                 .filter(repo => !repo.fork)
                 .map(repo => ({

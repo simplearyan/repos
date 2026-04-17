@@ -22,15 +22,49 @@ jobs:
 
       - name: Fetch repos from GitHub API
         run: |
+          # Backup old data for comparison
+          cp repos.json repos.json.old || touch repos.json.old
+          
           curl -s \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/users/simplearyan/repos?sort=updated&per_page=100" \
-            > repos.json
+            | jq '[.[] | select(.fork == false) | {
+              id: .id,
+              name: .name,
+              description: (.description // "Minimalist project built with clean code."),
+              stars: .stargazers_count,
+              forks: .forks_count,
+              language: (.language // "Web"),
+              url: .html_url,
+              pages: (.homepage // (if .has_pages then "https://simplearyan.github.io/\(.name)/" else null end)),
+              topics: (.topics // [])
+            }]' > repos.json
+
+      - name: Generate Commit Context
+        id: context
+        run: |
+          node -e "
+            const fs = require('fs');
+            const oldF = 'repos.json.old';
+            const newF = 'repos.json';
+            const oldD = fs.existsSync(oldF) ? JSON.parse(fs.readFileSync(oldF, 'utf8') || '[]') : [];
+            const newD = JSON.parse(fs.readFileSync(newF, 'utf8'));
+            const oldMap = new Map(oldD.map(r => [r.id, r]));
+            const added = newD.filter(r => !oldMap.has(r.id));
+            const stars = newD.filter(r => oldMap.has(r.id) && oldMap.get(r.id).stars !== r.stars);
+            const meta = newD.filter(r => oldMap.has(r.id) && (oldMap.get(r.id).description !== r.description || JSON.stringify(oldMap.get(r.id).topics) !== JSON.stringify(r.topics)));
+            let s = '';
+            if (added.length > 0) s += (added.length === 1 ? 'Added ' + added[0].name : 'Added ' + added.length + ' repos');
+            if (stars.length > 0) s += (s ? ', ' : '') + stars.length + ' star updates';
+            if (meta.length > 0 && !added.length && !stars.length) s += (s ? ', ' : '') + meta.length + ' metadata updates';
+            if (!s) s = 'data refresh';
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'summary=' + s + '\n');
+          "
 
       - name: Commit updated repos.json (if changed)
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: automated update of repos.json [skip ci]"
+          commit_message: "chore: automated update (${{ steps.context.outputs.summary }}) [skip ci]"
           file_pattern: repos.json
           branch: main
 
