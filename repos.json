@@ -1,5 +1,20 @@
 [
   {
+    "id": 1214151395,
+    "name": "vfx-demos",
+    "description": "Minimalist project built with clean code.",
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/vfx-demos",
+    "pages": "https://simplearyan.github.io/vfx-demos/",
+    "topics": [
+      "demos",
+      "html",
+      "html-css-javascript"
+    ]
+  },
+  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
