@@ -1,5 +1,18 @@
 [
   {
+    "id": 1194151087,
+    "name": "repos",
+    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/repos",
+    "pages": "https://simplearyan.github.io/repos/",
+    "topics": [
+      "repos-page"
+    ]
+  },
+  {
     "id": 1145895087,
     "name": "kenichi-converter",
     "description": "⚡ Kenichi Converter | A high-performance, cross-platform media converter — powered by FFmpeg, built with Tauri v2.",
@@ -13,19 +26,6 @@
       "react",
       "rust",
       "tauri"
-    ]
-  },
-  {
-    "id": 1194151087,
-    "name": "repos",
-    "description": "🚀 Automated GitHub Portfolio Dashboard",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/repos",
-    "pages": "https://simplearyan.github.io/repos/",
-    "topics": [
-      "repos-page"
     ]
   },
   {
