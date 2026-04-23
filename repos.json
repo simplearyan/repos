@@ -1,5 +1,21 @@
 [
   {
+    "id": 1145895087,
+    "name": "kenichi-converter",
+    "description": "⚡ Kenichi Converter | A high-performance, cross-platform media converter — powered by FFmpeg, built with Tauri v2.",
+    "stars": 1,
+    "forks": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kenichi-converter",
+    "pages": "",
+    "topics": [
+      "ffmpeg",
+      "react",
+      "rust",
+      "tauri"
+    ]
+  },
+  {
     "id": 1215009407,
     "name": "canvas-animator",
     "description": "Animator Studio 📐 (Blueprint Edition)",
@@ -275,22 +291,6 @@
     "topics": [
       "tauri-app",
       "vidstack"
-    ]
-  },
-  {
-    "id": 1145895087,
-    "name": "kenichi-converter",
-    "description": "A high-performance, aesthetically pleasing media conversion utility built with Tauri v2, React, and FFmpeg.",
-    "stars": 1,
-    "forks": 0,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kenichi-converter",
-    "pages": "",
-    "topics": [
-      "ffmpeg",
-      "react",
-      "rust",
-      "tauri"
     ]
   },
   {
