@@ -16,6 +16,22 @@
     ]
   },
   {
+    "id": 1114335159,
+    "name": "kinetix",
+    "description": "Kinetix turns your ideas into professional motion graphics, charts, and diagrams instantly. Export as MP4/WebM for premiere, Resolve, or social media.",
+    "stars": 4,
+    "forks": 2,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kinetix",
+    "pages": "https://simplearyan.github.io/kinetix/",
+    "topics": [
+      "animation",
+      "astrojs",
+      "mediabunny",
+      "typescript"
+    ]
+  },
+  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
@@ -144,22 +160,6 @@
     "topics": [
       "design",
       "reactjs",
-      "typescript"
-    ]
-  },
-  {
-    "id": 1114335159,
-    "name": "kinetix",
-    "description": "Kinetix turns your ideas into professional motion graphics, charts, and diagrams instantly. Export as MP4/WebM for premiere, Resolve, or social media.",
-    "stars": 3,
-    "forks": 2,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kinetix",
-    "pages": "https://simplearyan.github.io/kinetix/",
-    "topics": [
-      "animation",
-      "astrojs",
-      "mediabunny",
       "typescript"
     ]
   },
