@@ -1,16 +1,5 @@
 [
   {
-    "id": 1200975652,
-    "name": "iitm-notes-archive",
-    "description": "IITM Notes Archive | This is an unofficial, personal organization tool. It is not affiliated with, endorsed by, or sponsored by the Indian Institute of Technology Madras (IITM).",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/iitm-notes-archive",
-    "pages": "https://simplearyan.github.io/iitm-notes-archive/",
-    "topics": []
-  },
-  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
@@ -22,6 +11,17 @@
     "topics": [
       "repos-page"
     ]
+  },
+  {
+    "id": 1200975652,
+    "name": "iitm-notes-archive",
+    "description": "IITM Notes Archive | This is an unofficial, personal organization tool. It is not affiliated with, endorsed by, or sponsored by the Indian Institute of Technology Madras (IITM).",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/iitm-notes-archive",
+    "pages": "https://simplearyan.github.io/iitm-notes-archive/",
+    "topics": []
   },
   {
     "id": 1215009407,
