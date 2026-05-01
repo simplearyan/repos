@@ -1,5 +1,21 @@
 [
   {
+    "id": 1215009407,
+    "name": "canvas-animator",
+    "description": "Animator Studio 📐 (Blueprint Edition)",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/canvas-animator",
+    "pages": "https://simplearyan.github.io/canvas-animator/",
+    "topics": [
+      "canvas",
+      "canvas-api",
+      "demos",
+      "design-demos"
+    ]
+  },
+  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
@@ -22,22 +38,6 @@
     "url": "https://github.com/simplearyan/iitm-notes-archive",
     "pages": "https://simplearyan.github.io/iitm-notes-archive/",
     "topics": []
-  },
-  {
-    "id": 1215009407,
-    "name": "canvas-animator",
-    "description": "Animator Studio 📐 (Blueprint Edition)",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/canvas-animator",
-    "pages": "https://simplearyan.github.io/canvas-animator/",
-    "topics": [
-      "canvas",
-      "canvas-api",
-      "demos",
-      "design-demos"
-    ]
   },
   {
     "id": 1114335159,
