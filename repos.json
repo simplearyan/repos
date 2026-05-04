@@ -1,16 +1,5 @@
 [
   {
-    "id": 1157775814,
-    "name": "design-demos",
-    "description": "A collection of experimental design concepts, prototypes, and landing pages.",
-    "stars": 0,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/design-demos",
-    "pages": "https://simplearyan.github.io/design-demos/",
-    "topics": []
-  },
-  {
     "id": 1215009407,
     "name": "canvas-animator",
     "description": "Animator Studio 📐 (Blueprint Edition)",
@@ -38,6 +27,17 @@
     "topics": [
       "repos-page"
     ]
+  },
+  {
+    "id": 1157775814,
+    "name": "design-demos",
+    "description": "A collection of experimental design concepts, prototypes, and landing pages.",
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/design-demos",
+    "pages": "https://simplearyan.github.io/design-demos/",
+    "topics": []
   },
   {
     "id": 1200975652,
