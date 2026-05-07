@@ -1,5 +1,16 @@
 [
   {
+    "id": 1062416909,
+    "name": "text-editor",
+    "description": "Pro Text Animation Editor",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/text-editor",
+    "pages": "https://simplearyan.github.io/text-editor/",
+    "topics": []
+  },
+  {
     "id": 1215009407,
     "name": "canvas-animator",
     "description": "Animator Studio 📐 (Blueprint Edition)",
@@ -374,17 +385,6 @@
     "language": "C#",
     "url": "https://github.com/simplearyan/VideoEngineCore",
     "pages": null,
-    "topics": []
-  },
-  {
-    "id": 1062416909,
-    "name": "text-editor",
-    "description": "Pro Text Animation Editor",
-    "stars": 0,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/text-editor",
-    "pages": "https://simplearyan.github.io/text-editor/",
     "topics": []
   },
   {
