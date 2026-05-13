@@ -1,5 +1,57 @@
 [
   {
+    "id": 1140287389,
+    "name": "kenichi-svelte",
+    "description": "The high-performance, open-source video editing suite for everyone.",
+    "stars": 2,
+    "forks": 0,
+    "language": "Rust",
+    "url": "https://github.com/simplearyan/kenichi-svelte",
+    "pages": "",
+    "topics": []
+  },
+  {
+    "id": 1144955110,
+    "name": "kenichi-player",
+    "description": "A minimalist, lightweight media player built for the \"Potato PC\" era.",
+    "stars": 2,
+    "forks": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kenichi-player",
+    "pages": "",
+    "topics": [
+      "tauri-app",
+      "vidstack"
+    ]
+  },
+  {
+    "id": 1135422647,
+    "name": "kinetix-engine",
+    "description": "The High-Performance, Framework-Agnostic Video Engine for the Web.",
+    "stars": 3,
+    "forks": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kinetix-engine",
+    "pages": "https://simplearyan.github.io/kinetix-engine/",
+    "topics": []
+  },
+  {
+    "id": 1145895087,
+    "name": "kenichi-converter",
+    "description": "⚡ Kenichi Converter | A high-performance, cross-platform media converter — powered by FFmpeg, built with Tauri v2.",
+    "stars": 2,
+    "forks": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kenichi-converter",
+    "pages": "",
+    "topics": [
+      "ffmpeg",
+      "react",
+      "rust",
+      "tauri"
+    ]
+  },
+  {
     "id": 1235248039,
     "name": "kenichi-solid",
     "description": "A high-performance, professional web-based video editor prototype inspired by macOS aesthetics. Built with SolidJS, TypeScript, and Tailwind CSS.",
@@ -107,22 +159,6 @@
       "demos",
       "html",
       "html-css-javascript"
-    ]
-  },
-  {
-    "id": 1145895087,
-    "name": "kenichi-converter",
-    "description": "⚡ Kenichi Converter | A high-performance, cross-platform media converter — powered by FFmpeg, built with Tauri v2.",
-    "stars": 1,
-    "forks": 0,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kenichi-converter",
-    "pages": "",
-    "topics": [
-      "ffmpeg",
-      "react",
-      "rust",
-      "tauri"
     ]
   },
   {
@@ -252,17 +288,6 @@
     ]
   },
   {
-    "id": 1135422647,
-    "name": "kinetix-engine",
-    "description": "The High-Performance, Framework-Agnostic Video Engine for the Web.",
-    "stars": 2,
-    "forks": 0,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kinetix-engine",
-    "pages": "https://simplearyan.github.io/kinetix-engine/",
-    "topics": []
-  },
-  {
     "id": 949767730,
     "name": "simplearyan.github.io",
     "description": "😺 Aryan Portfolio",
@@ -306,31 +331,6 @@
       "exercises",
       "hugo"
     ]
-  },
-  {
-    "id": 1144955110,
-    "name": "kenichi-player",
-    "description": "A minimalist, lightweight media player built for the \"Potato PC\" era.",
-    "stars": 1,
-    "forks": 0,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kenichi-player",
-    "pages": "",
-    "topics": [
-      "tauri-app",
-      "vidstack"
-    ]
-  },
-  {
-    "id": 1140287389,
-    "name": "kenichi-svelte",
-    "description": "The high-performance, open-source video editing suite for everyone.",
-    "stars": 1,
-    "forks": 0,
-    "language": "Rust",
-    "url": "https://github.com/simplearyan/kenichi-svelte",
-    "pages": "",
-    "topics": []
   },
   {
     "id": 1138057791,
