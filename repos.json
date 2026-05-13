@@ -1,5 +1,33 @@
 [
   {
+    "id": 1146617568,
+    "name": "kenichi-preview",
+    "description": "Kenichi Preview is a high-performance, native-layer video player built with Tauri v2, Rust, WGPU, and FFmpeg. It bypasses the standard Webview video tag to achieve frame-accurate rendering and professional-grade performance through a direct-to-GPU pipeline.",
+    "stars": 2,
+    "forks": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kenichi-preview",
+    "pages": "",
+    "topics": [
+      "ffmpeg-next",
+      "rust",
+      "tauri"
+    ]
+  },
+  {
+    "id": 1194151087,
+    "name": "repos",
+    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/repos",
+    "pages": "https://simplearyan.github.io/repos/",
+    "topics": [
+      "repos-page"
+    ]
+  },
+  {
     "id": 1140287389,
     "name": "kenichi-svelte",
     "description": "The high-performance, open-source video editing suite for everyone.",
@@ -66,19 +94,6 @@
       "solidjs",
       "tailwindcss",
       "typescript"
-    ]
-  },
-  {
-    "id": 1194151087,
-    "name": "repos",
-    "description": "🚀 Automated GitHub Portfolio Dashboard",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/repos",
-    "pages": "https://simplearyan.github.io/repos/",
-    "topics": [
-      "repos-page"
     ]
   },
   {
@@ -301,21 +316,6 @@
       "github-pages",
       "hugo",
       "portfolio-website"
-    ]
-  },
-  {
-    "id": 1146617568,
-    "name": "kenichi-preview",
-    "description": "Kenichi Preview is a high-performance, native-layer video player built with Tauri v2, Rust, WGPU, and FFmpeg. It bypasses the standard Webview video tag to achieve frame-accurate rendering and professional-grade performance through a direct-to-GPU pipeline.",
-    "stars": 1,
-    "forks": 0,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kenichi-preview",
-    "pages": "",
-    "topics": [
-      "ffmpeg-next",
-      "rust",
-      "tauri"
     ]
   },
   {
