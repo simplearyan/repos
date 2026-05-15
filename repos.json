@@ -1,5 +1,22 @@
 [
   {
+    "id": 1235248039,
+    "name": "kenichi-solid",
+    "description": "A high-performance, professional web-based video editor prototype inspired by macOS aesthetics. Built with SolidJS, TypeScript, and Tailwind CSS.",
+    "stars": 1,
+    "forks": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/simplearyan/kenichi-solid",
+    "pages": "https://simplearyan.github.io/kenichi-solid/",
+    "topics": [
+      "canvas",
+      "mediabunny",
+      "solidjs",
+      "tailwindcss",
+      "typescript"
+    ]
+  },
+  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
@@ -93,23 +110,6 @@
       "react",
       "rust",
       "tauri"
-    ]
-  },
-  {
-    "id": 1235248039,
-    "name": "kenichi-solid",
-    "description": "A high-performance, professional web-based video editor prototype inspired by macOS aesthetics. Built with SolidJS, TypeScript, and Tailwind CSS.",
-    "stars": 1,
-    "forks": 0,
-    "language": "TypeScript",
-    "url": "https://github.com/simplearyan/kenichi-solid",
-    "pages": "https://simplearyan.github.io/kenichi-solid/",
-    "topics": [
-      "canvas",
-      "mediabunny",
-      "solidjs",
-      "tailwindcss",
-      "typescript"
     ]
   },
   {
