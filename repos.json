@@ -2,13 +2,32 @@
   {
     "id": 1241952153,
     "name": "canvas.labs",
-    "description": "Minimalist project built with clean code.",
-    "stars": 0,
+    "description": "High-Fidelity Animation Platform",
+    "stars": 1,
     "forks": 0,
-    "language": "Web",
+    "language": "Astro",
     "url": "https://github.com/simplearyan/canvas.labs",
     "pages": "https://simplearyan.github.io/canvas.labs/",
-    "topics": []
+    "topics": [
+      "astro",
+      "canvas",
+      "mediabunny",
+      "solid",
+      "typescript"
+    ]
+  },
+  {
+    "id": 1194151087,
+    "name": "repos",
+    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/repos",
+    "pages": "https://simplearyan.github.io/repos/",
+    "topics": [
+      "repos-page"
+    ]
   },
   {
     "id": 1235248039,
@@ -25,19 +44,6 @@
       "solidjs",
       "tailwindcss",
       "typescript"
-    ]
-  },
-  {
-    "id": 1194151087,
-    "name": "repos",
-    "description": "🚀 Automated GitHub Portfolio Dashboard",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/repos",
-    "pages": "https://simplearyan.github.io/repos/",
-    "topics": [
-      "repos-page"
     ]
   },
   {
