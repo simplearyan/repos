@@ -1,5 +1,16 @@
 [
   {
+    "id": 1241952153,
+    "name": "canvas.labs",
+    "description": "Minimalist project built with clean code.",
+    "stars": 0,
+    "forks": 0,
+    "language": "Web",
+    "url": "https://github.com/simplearyan/canvas.labs",
+    "pages": "https://simplearyan.github.io/canvas.labs/",
+    "topics": []
+  },
+  {
     "id": 1235248039,
     "name": "kenichi-solid",
     "description": "A high-performance, professional web-based video editor prototype inspired by macOS aesthetics. Built with SolidJS, TypeScript, and Tailwind CSS.",
