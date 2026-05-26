@@ -5,7 +5,7 @@
     "description": "High-Fidelity Animation Platform",
     "stars": 1,
     "forks": 0,
-    "language": "Astro",
+    "language": "TypeScript",
     "url": "https://github.com/simplearyan/canvas.labs",
     "pages": "https://simplearyan.github.io/canvas.labs/",
     "topics": [
