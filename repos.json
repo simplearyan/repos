@@ -1,5 +1,23 @@
 [
   {
+    "id": 1199355947,
+    "name": "mark-it",
+    "description": "Professional, Pixel-Perfect & SPA-Resilient Annotation Suite",
+    "stars": 1,
+    "forks": 0,
+    "language": "JavaScript",
+    "url": "https://github.com/simplearyan/mark-it",
+    "pages": "https://simplearyan.github.io/mark-it/",
+    "topics": [
+      "annotation-tool",
+      "chrome-extension",
+      "excildraw",
+      "extension",
+      "roughjs",
+      "whiteboard"
+    ]
+  },
+  {
     "id": 1241952153,
     "name": "canvas.labs",
     "description": "High-Fidelity Animation Platform",
@@ -208,24 +226,6 @@
       "vanilla-javascript",
       "web-worker",
       "webcodecs"
-    ]
-  },
-  {
-    "id": 1199355947,
-    "name": "mark-it",
-    "description": "Professional, Pixel-Perfect & SPA-Resilient Annotation Suite",
-    "stars": 1,
-    "forks": 0,
-    "language": "JavaScript",
-    "url": "https://github.com/simplearyan/mark-it",
-    "pages": "https://simplearyan.github.io/mark-it/",
-    "topics": [
-      "annotation-tool",
-      "chrome-extension",
-      "excildraw",
-      "extension",
-      "roughjs",
-      "whiteboard"
     ]
   },
   {
