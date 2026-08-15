@@ -1,5 +1,23 @@
 [
   {
+    "id": 1333880532,
+    "name": "yt-downloader",
+    "description": "A local command-line tool for downloading YouTube videos reliably for video editing in StudioPro.",
+    "stars": 1,
+    "forks": 0,
+    "language": "JavaScript",
+    "url": "https://github.com/simplearyan/yt-downloader",
+    "pages": "https://simplearyan.github.io/yt-downloader/",
+    "topics": [
+      "ffmpeg",
+      "tauri",
+      "youtube-downloader",
+      "yt-dlp",
+      "yt-dlp-gui",
+      "yt-downloader"
+    ]
+  },
+  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
@@ -11,17 +29,6 @@
     "topics": [
       "repos-page"
     ]
-  },
-  {
-    "id": 1333880532,
-    "name": "yt-downloader",
-    "description": "Minimalist project built with clean code.",
-    "stars": 0,
-    "forks": 0,
-    "language": "Web",
-    "url": "https://github.com/simplearyan/yt-downloader",
-    "pages": null,
-    "topics": []
   },
   {
     "id": 1316944083,
