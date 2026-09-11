@@ -1,5 +1,21 @@
 [
   {
+    "id": 1194195768,
+    "name": "exam-canvas",
+    "description": "Exam Canvas is a highly interactive, truly serverless Mock Examination Portal and EdTech Whiteboarding application.",
+    "stars": 2,
+    "forks": 0,
+    "language": "JavaScript",
+    "url": "https://github.com/simplearyan/exam-canvas",
+    "pages": "https://simplearyan.github.io/exam-canvas/",
+    "topics": [
+      "design",
+      "exam-management-system",
+      "react",
+      "typescript"
+    ]
+  },
+  {
     "id": 1316944083,
     "name": "studio-pro",
     "description": "StudioPro Editor",
@@ -261,22 +277,6 @@
       "vanilla-javascript",
       "web-worker",
       "webcodecs"
-    ]
-  },
-  {
-    "id": 1194195768,
-    "name": "exam-canvas",
-    "description": "Exam Canvas is a highly interactive, truly serverless Mock Examination Portal and EdTech Whiteboarding application.",
-    "stars": 1,
-    "forks": 0,
-    "language": "JavaScript",
-    "url": "https://github.com/simplearyan/exam-canvas",
-    "pages": "https://simplearyan.github.io/exam-canvas/",
-    "topics": [
-      "design",
-      "exam-management-system",
-      "react",
-      "typescript"
     ]
   },
   {
