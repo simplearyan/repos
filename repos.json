@@ -1,16 +1,5 @@
 [
   {
-    "id": 1391704439,
-    "name": "chalkpress",
-    "description": "Content factory for short-form math explainers: questions + solutions + scripts",
-    "stars": 0,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/chalkpress",
-    "pages": "https://simplearyan.github.io/chalkpress/",
-    "topics": []
-  },
-  {
     "id": 1194151087,
     "name": "repos",
     "description": "🚀 Automated GitHub Portfolio Dashboard",
@@ -22,6 +11,17 @@
     "topics": [
       "repos-page"
     ]
+  },
+  {
+    "id": 1391704439,
+    "name": "chalkpress",
+    "description": "Content factory for short-form math explainers: questions + solutions + scripts",
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/chalkpress",
+    "pages": "https://simplearyan.github.io/chalkpress/",
+    "topics": []
   },
   {
     "id": 1200975652,
