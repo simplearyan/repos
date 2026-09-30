@@ -1,5 +1,18 @@
 [
   {
+    "id": 1194151087,
+    "name": "repos",
+    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/repos",
+    "pages": "https://simplearyan.github.io/repos/",
+    "topics": [
+      "repos-page"
+    ]
+  },
+  {
     "id": 1316944083,
     "name": "studio-pro",
     "description": "👀Built for creators who want a pro editing feel with zero setup. Make something great! 🤌",
@@ -26,19 +39,6 @@
     "url": "https://github.com/simplearyan/chalkpress",
     "pages": "https://simplearyan.github.io/chalkpress/",
     "topics": []
-  },
-  {
-    "id": 1194151087,
-    "name": "repos",
-    "description": "🚀 Automated GitHub Portfolio Dashboard",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/repos",
-    "pages": "https://simplearyan.github.io/repos/",
-    "topics": [
-      "repos-page"
-    ]
   },
   {
     "id": 1200975652,
