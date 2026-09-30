@@ -1,15 +1,19 @@
 [
   {
-    "id": 1194151087,
-    "name": "repos",
-    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "id": 1316944083,
+    "name": "studio-pro",
+    "description": "👀Built for creators who want a pro editing feel with zero setup. Make something great! 🤌",
     "stars": 1,
     "forks": 0,
     "language": "HTML",
-    "url": "https://github.com/simplearyan/repos",
-    "pages": "https://simplearyan.github.io/repos/",
+    "url": "https://github.com/simplearyan/studio-pro",
+    "pages": "https://simplearyan.github.io/studio-pro/",
     "topics": [
-      "repos-page"
+      "editor",
+      "mediabunny",
+      "vanilla-javascript",
+      "vanilla-js",
+      "video-editor"
     ]
   },
   {
@@ -24,6 +28,19 @@
     "topics": []
   },
   {
+    "id": 1194151087,
+    "name": "repos",
+    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/repos",
+    "pages": "https://simplearyan.github.io/repos/",
+    "topics": [
+      "repos-page"
+    ]
+  },
+  {
     "id": 1200975652,
     "name": "iitm-notes-archive",
     "description": "IITM Notes Archive | This is an unofficial, personal organization tool. It is not affiliated with, endorsed by, or sponsored by the Indian Institute of Technology Madras (IITM).",
@@ -33,23 +50,6 @@
     "url": "https://github.com/simplearyan/iitm-notes-archive",
     "pages": "https://simplearyan.github.io/iitm-notes-archive/",
     "topics": []
-  },
-  {
-    "id": 1316944083,
-    "name": "studio-pro",
-    "description": "StudioPro Editor",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/studio-pro",
-    "pages": "https://simplearyan.github.io/studio-pro/",
-    "topics": [
-      "editor",
-      "mediabunny",
-      "vanilla-javascript",
-      "vanilla-js",
-      "video-editor"
-    ]
   },
   {
     "id": 1194195768,
