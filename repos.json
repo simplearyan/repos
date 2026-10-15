@@ -1,5 +1,18 @@
 [
   {
+    "id": 1194151087,
+    "name": "repos",
+    "description": "🚀 Automated GitHub Portfolio Dashboard",
+    "stars": 1,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/simplearyan/repos",
+    "pages": "https://simplearyan.github.io/repos/",
+    "topics": [
+      "repos-page"
+    ]
+  },
+  {
     "id": 1114335159,
     "name": "kinetix",
     "description": "Kinetix turns your ideas into professional motion graphics, charts, and diagrams instantly. Export as MP4/WebM for premiere, Resolve, or social media.",
@@ -13,19 +26,6 @@
       "astrojs",
       "mediabunny",
       "typescript"
-    ]
-  },
-  {
-    "id": 1194151087,
-    "name": "repos",
-    "description": "🚀 Automated GitHub Portfolio Dashboard",
-    "stars": 1,
-    "forks": 0,
-    "language": "HTML",
-    "url": "https://github.com/simplearyan/repos",
-    "pages": "https://simplearyan.github.io/repos/",
-    "topics": [
-      "repos-page"
     ]
   },
   {
